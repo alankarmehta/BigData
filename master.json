@@ -117,7 +117,7 @@
                         "contentVersion": "1.0.0.0"
                     },
                     "parametersLink": {
-                        "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/ADLSparameter.json",
+                        "uri": "https://github.com/alankarmehta/BigData/blob/master/ADLSparameter.json",
                         "contentVersion": "1.0.0.0"
                     }
                 }
