@@ -101,7 +101,7 @@
                         "contentVersion": "1.0.0.0"
                     },
                     "parametersLink": {
-                        "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/HDInsightparameters.json",
+                        "uri": "https://github.com/alankarmehta/BigData/blob/master/HDInsightparameters.json",
                         "contentVersion": "1.0.0.0"
                     }
                 }
