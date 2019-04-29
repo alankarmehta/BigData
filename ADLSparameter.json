@@ -3,10 +3,10 @@
 	"contentVersion": "1.0.0.0",
 	"parameters": {
 		"adlAnalyticsName": {
-			"value": "bigdataanalytics1"
+			"value": "bigdataanalytics24"
 		},
 		"adlStoreName": {
-			"value": "bigdatastorage1"
+			"value": "bigdatastorage24"
 		}
 	}
 }
