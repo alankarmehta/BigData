@@ -97,7 +97,7 @@
                 "properties": {
                     "mode": "Incremental",
                     "templateLink": {
-                        "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/HDInsight.json",
+                        "uri": "https://github.com/alankarmehta/BigData/blob/master/HDInsight.json",
                         "contentVersion": "1.0.0.0"
                     },
                     "parametersLink": {
