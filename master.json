@@ -97,11 +97,11 @@
                 "properties": {
                     "mode": "Incremental",
                     "templateLink": {
-                        "uri": "https://shabstorageacnt.blob.core.windows.net/bigdata/HDInsight.json",
+                        "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/HDInsight.json",
                         "contentVersion": "1.0.0.0"
                     },
                     "parametersLink": {
-                        "uri": "https://shabstorageacnt.blob.core.windows.net/bigdata/parameters.json",
+                        "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/HDInsightparameters.json",
                         "contentVersion": "1.0.0.0"
                     }
                 }
@@ -113,11 +113,11 @@
                 "properties": {
                     "mode": "Incremental",
                     "templateLink": {
-                        "uri": "https://shabstorageacnt.blob.core.windows.net/bigdata/datalakestore.json",
+                        "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/datalakestore.json",
                         "contentVersion": "1.0.0.0"
                     },
                     "parametersLink": {
-                        "uri": "https://shabstorageacnt.blob.core.windows.net/bigdata/ADLSparameter.json",
+                        "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/ADLSparameter.json",
                         "contentVersion": "1.0.0.0"
                     }
                 }
