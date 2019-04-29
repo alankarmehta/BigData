@@ -113,7 +113,7 @@
                 "properties": {
                     "mode": "Incremental",
                     "templateLink": {
-                        "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/datalakestore.json",
+                        "uri": "https://github.com/alankarmehta/BigData/blob/master/datalakestore.json",
                         "contentVersion": "1.0.0.0"
                     },
                     "parametersLink": {
