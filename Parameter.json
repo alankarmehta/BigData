@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
 	    "adlAnalyticsName": {
-			"value": "bigdataanalytics24"
+			"value": "bigdataanalytics1"
 		},
 		"adlStoreName": {
-			"value": "bigdatastorage24"
+			"value": "bigdatastorage1"
         },
 		"clusterName": {
             "value": "bigdatacluster"
@@ -18,7 +18,7 @@
             "value": "HDInsight@123"
         },
         "clusterWorkerNodeCount": {
-            "value": 4
+            "value": 2
         },
         "clusterKind": {
             "value": "HADOOP"
