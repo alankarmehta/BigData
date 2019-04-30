@@ -11,14 +11,12 @@
         },
         "adlAnalyticsName": {
             "type": "string",
-            "defaultValue": "bigdataanalytics1",
             "metadata": {
                 "description": "The name of the Data Lake Analytics account to create."
             }
         },
         "adlStoreName": {
             "type": "string",
-            "defaultValue": "bigdatastorage1",
             "metadata": {
                 "description": "The name of the Data Lake Store account to create."
             }
@@ -38,21 +36,18 @@
         },
         "clusterName": {
             "type": "string",
-            "defaultValue": "bigdatacluster",
             "metadata": {
                 "description": "The name of the HDInsight cluster to create."
             }
         },
         "clusterLoginUserName": {
             "type": "string",
-            "defaultValue": "admin",
             "metadata": {
                 "description": "These credentials can be used to submit jobs to the cluster and to log into cluster dashboards."
             }
         },
         "clusterLoginPassword": {
             "type": "securestring",
-            "defaultValue": "HDInsight@123",
             "metadata": {
                 "description": "The password must be at least 10 characters in length and must contain at least one digit, one non-alphanumeric character, and one upper or lower case letter."
             }
@@ -73,21 +68,18 @@
         },
         "clusterKind": {
             "type": "string",
-            "defaultValue": "HADOOP",
             "metadata": {
                 "description": "The type of the HDInsight cluster to create."
             }
         },
         "sshUserName": {
             "type": "string",
-            "defaultValue": "sshuser",
             "metadata": {
                 "description": "These credentials can be used to remotely access the cluster."
             }
         },
         "sshPassword": {
             "type": "securestring",
-            "defaultValue": "Avantika@12345",
             "metadata": {
                 "description": "The password must be at least 10 characters in length and must contain at least one digit, one non-alphanumeric character, and one upper or lower case letter."
             }
