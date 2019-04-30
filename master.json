@@ -11,6 +11,7 @@
         },
         "adlAnalyticsName": {
             "type": "string",
+            "defaultValue" : "bigdataanalytics1",
             "metadata": {
                 "description": "The name of the Data Lake Analytics account to create."
             }
