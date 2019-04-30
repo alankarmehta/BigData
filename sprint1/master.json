@@ -1,0 +1,124 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "containerName": {
+            "type": "string",
+            "defaultValue": "logs",
+            "metadata": {
+                "description": "Specifies the name of the blob container."
+            }
+        },
+        "adlAnalyticsName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the Data Lake Analytics account to create."
+            }
+        },
+        "adlStoreName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the Data Lake Store account to create."
+            }
+        },
+        "location": {
+            "type": "string",
+            "allowedValues": [
+                "East US 2",
+                "East US",
+                "Central US",
+                "North Europe",
+                "West Europe"
+            ],
+            "defaultValue": "East US",
+            "metadata": {
+                "description": "The location in which the resources will be created."
+            }
+        },
+        "clusterName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the HDInsight cluster to create."
+            }
+        },
+        "clusterLoginUserName": {
+            "type": "string",
+            "metadata": {
+                "description": "These credentials can be used to submit jobs to the cluster and to log into cluster dashboards."
+            }
+        },
+        "clusterLoginPassword": {
+            "type": "securestring",
+            "metadata": {
+                "description": "The password must be at least 10 characters in length and must contain at least one digit, one non-alphanumeric character, and one upper or lower case letter."
+            }
+        },
+        "clusterVersion": {
+            "type": "string",
+            "defaultValue": "3.6",
+            "metadata": {
+                "description": "HDInsight cluster version."
+            }
+        },
+        "clusterWorkerNodeCount": {
+            "type": "int",
+            "defaultValue": 2,
+            "metadata": {
+                "description": "The number of nodes in the HDInsight cluster."
+            }
+        },
+        "clusterKind": {
+            "type": "string",
+            "metadata": {
+                "description": "The type of the HDInsight cluster to create."
+            }
+        },
+        "sshUserName": {
+            "type": "string",
+            "metadata": {
+                "description": "These credentials can be used to remotely access the cluster."
+            }
+        },
+        "sshPassword": {
+            "type": "securestring",
+            "metadata": {
+                "description": "The password must be at least 10 characters in length and must contain at least one digit, one non-alphanumeric character, and one upper or lower case letter."
+            }
+        }
+       
+    },
+        "resources": [
+            {
+                "type": "Microsoft.Resources/deployments",
+                "apiVersion": "2018-05-01",
+                "name": "hdinsightlinkedTemplate",
+                "properties": {
+                    "mode": "Incremental",
+                    "templateLink": {
+                        "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/sprint1/HDInsight.json",
+                        "contentVersion": "1.0.0.0"
+                    },
+                    "parametersLink": {
+                        "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/sprint1/HDInsightparameters.json",
+                        "contentVersion": "1.0.0.0"
+                    }
+                }
+            },
+            {
+                "type": "Microsoft.Resources/deployments",
+                "apiVersion": "2018-05-01",
+                "name": "datalakelinkedTemplate1",
+                "properties": {
+                    "mode": "Incremental",
+                    "templateLink": {
+                        "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/sprint1/datalakestore.json",
+                        "contentVersion": "1.0.0.0"
+                    },
+                    "parametersLink": {
+                        "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/sprint1/ADLSparameter.json",
+                        "contentVersion": "1.0.0.0"
+                    }
+                }
+            }
+        ]
+    }
