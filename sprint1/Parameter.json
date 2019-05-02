@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
 	    "adlAnalyticsName": {
-			"value": "bigdataanalytics1"
+			"value": "bigdataanalytics9999"
 		},
 		"adlStoreName": {
-			"value": "bigdatastorage1"
+			"value": "bigdatastorage9999"
         	},
 		"clusterName": {
-        		"value": "bigdatacluster"
+        		"value": "bigdatacluster9999"
 		},
 		"clusterLoginUserName": {
 		    "value": "admin"
