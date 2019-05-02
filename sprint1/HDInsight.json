@@ -2,6 +2,18 @@
     "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "hdistoragename": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the Storage Account."
+            }
+        },        
+        "containerName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the Storage Container."
+            }
+        },
         "clusterName": {
             "type": "string",
             "metadata": {
@@ -19,13 +31,6 @@
             "type": "securestring",
             "metadata": {
                 "description": "The password must be at least 10 characters in length and must contain at least one digit, one non-alphanumeric character, and one upper or lower case letter."
-            }
-        },
-        "location": {
-            "type": "string",
-            "defaultValue": "eastus",
-            "metadata": {
-                "description": "The location where all azure resources will be deployed."
             }
         },
         "clusterVersion": {
@@ -56,20 +61,19 @@
                 "description": "These credentials can be used to remotely access the cluster."
             }
         },
-        "sshPassword" : {
-            "type":"securestring",
+        "sshPassword": {
+            "type": "securestring",
             "defaultValue": "Avantika@12345"
         }
-    
     },
     "resources": [
         {
             "apiVersion": "2015-03-01-preview",
             "name": "[parameters('clusterName')]",
             "type": "Microsoft.HDInsight/clusters",
-            "location": "[parameters('location')]",
+            "location": "[resourceGroup().location]",
             "dependsOn": [
-                "Microsoft.Storage/storageAccounts/globantbigdata23"
+                "[concat('Microsoft.Storage/storageAccounts/',parameters('hdistoragename'))]"
             ],
             "properties": {
                 "clusterVersion": "[parameters('clusterVersion')]",
@@ -91,10 +95,10 @@
                 "storageProfile": {
                     "storageaccounts": [
                         {
-                            "name": "globantbigdata23.blob.core.windows.net",
+                            "name": "[parameters('hdistoragename')]",
                             "isDefault": true,
-                            "container": "globantcluster-2019-04-24t11-45-37-880z",
-                            "key": "[listKeys('Microsoft.Storage/storageAccounts/globantbigdata23', '2015-05-01-preview').key1]"
+                            "container": "[parameters('containerName')]",
+                            "key": "[listKeys(concat('Microsoft.Storage/storageAccounts/',parameters('hdistoragename')), '2015-05-01-preview').key1]"
                         }
                     ]
                 },
@@ -159,9 +163,9 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts",
-            "name": "globantbigdata23",
+            "name": "[parameters('hdistoragename')]",
             "apiVersion": "2015-05-01-preview",
-            "location": "eastus",
+            "location": "[resourceGroup().location]",
             "properties": {
                 "accountType": "Standard_LRS"
             }

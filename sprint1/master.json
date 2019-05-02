@@ -97,10 +97,6 @@
                     "templateLink": {
                         "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/sprint1/HDInsight.json",
                         "contentVersion": "1.0.0.0"
-                    },
-                    "parametersLink": {
-                        "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/sprint1/HDInsightparameters.json",
-                        "contentVersion": "1.0.0.0"
                     }
                 }
             },
@@ -112,10 +108,6 @@
                     "mode": "Incremental",
                     "templateLink": {
                         "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/sprint1/datalakestore.json",
-                        "contentVersion": "1.0.0.0"
-                    },
-                    "parametersLink": {
-                        "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/sprint1/ADLSparameter.json",
                         "contentVersion": "1.0.0.0"
                     }
                 }
