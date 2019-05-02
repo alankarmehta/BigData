@@ -145,26 +145,6 @@
                     }
                 }
             }
-        },
-        {
-            "type": "Microsoft.Resources/deployments",
-            "apiVersion": "2018-05-01",
-            "name": "datalakelinkedTemplate1",
-            "properties": {
-                "mode": "Incremental",
-                "templateLink": {
-                    "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/sprint1/datalakestore.json",
-                    "contentVersion": "1.0.0.0"
-                },
-                "parameters": {
-                    "adlAnalyticsName": {
-                        "value": "[parameters('adlAnalyticsName')]"
-                    },                    
-                    "adlStoreName": {
-                        "value": "[parameters('adlStoreName')]"
-                    }
-                }
-            }
         }
     ]
 }
