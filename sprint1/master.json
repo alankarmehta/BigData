@@ -158,10 +158,10 @@
                 },
                 "parameters": {
                     "adlAnalyticsName": {
-                        "value": "[parameters('adlAnalyticsName5555')]"
+                        "value": "[parameters('adlAnalyticsName')]"
                     },                    
                     "adlStoreName": {
-                        "value": "[parameters('adlStoreName5555')]"
+                        "value": "[parameters('adlStoreName')]"
                     }
                 }
             }
