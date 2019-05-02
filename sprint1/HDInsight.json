@@ -22,7 +22,6 @@
         },
         "clusterLoginUserName": {
             "type": "string",
-            "defaultValue": "admin",
             "metadata": {
                 "description": "These credentials can be used to submit jobs to the cluster and to log into cluster dashboards."
             }
@@ -35,35 +34,30 @@
         },
         "clusterVersion": {
             "type": "string",
-            "defaultValue": "3.6",
             "metadata": {
                 "description": "HDInsight cluster version."
             }
         },
         "clusterWorkerNodeCount": {
             "type": "int",
-            "defaultValue": 4,
             "metadata": {
                 "description": "The number of nodes in the HDInsight cluster."
             }
         },
         "clusterKind": {
             "type": "string",
-            "defaultValue": "HADOOP",
             "metadata": {
                 "description": "The type of the HDInsight cluster to create."
             }
         },
         "sshUserName": {
             "type": "string",
-            "defaultValue": "sshuser",
             "metadata": {
                 "description": "These credentials can be used to remotely access the cluster."
             }
         },
         "sshPassword": {
-            "type": "securestring",
-            "defaultValue": "Avantika@12345"
+            "type": "securestring"
         }
     },
     "resources": [
