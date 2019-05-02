@@ -39,7 +39,7 @@
                 "North Europe",
                 "West Europe"
             ],
-            "defaultValue": "East US",
+            "defaultValue": "East US 2",
             "metadata": {
                 "description": "The location in which the resources will be created."
             }
