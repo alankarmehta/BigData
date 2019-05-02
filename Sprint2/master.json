@@ -109,7 +109,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/sprint2/HDInsight.json",
+                    "uri": "https://raw.githubusercontent.com/alankarmehta/BigData/master/Sprint2/HDInsight.json",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
